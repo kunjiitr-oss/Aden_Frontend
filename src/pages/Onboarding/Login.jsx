@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
-import googleLogo from "../../assets/googleLogo.png";
-import appleLogo from "../../assets/appleLogo.png";
+import googleLogo from "../../assets/logo/googleLogo.png";
+import appleLogo from "../../assets/logo/appleLogo.png";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -14,7 +14,7 @@ const Login = () => {
     <div className="onboarding-container">
       <div className="onboarding-left">
         <div className="login-form-container">
-          <h1 className="welcome-text">WELCOME TO ADEN</h1>
+          <h1 className="welcome-text">WELCOME TO <br /> ADEN</h1>
 
           <form>
             {/* Email Field */}
@@ -94,7 +94,7 @@ const Login = () => {
       <div className="onboarding-right">
         <div className="hero-content">
           <h2 className="hero-text">
-            MEET YOUR
+            MEET <br /> YOUR
             <br />
             HEALTH
             <br />
