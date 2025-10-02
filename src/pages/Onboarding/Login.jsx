@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Login.css";
 import googleLogo from "../../assets/logo/googleLogo.png";
 import appleLogo from "../../assets/logo/appleLogo.png";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -9,6 +10,11 @@ const Login = () => {
   const togglePassword = () => {
     setShowPassword((prev) => !prev);
   };
+
+  const navigate = useNavigate()
+  const dashlayout = () => {
+   navigate("/dashlayout")
+  }
 
   return (
     <div className="onboarding-container">
@@ -54,8 +60,8 @@ const Login = () => {
             </div>
 
             {/* Log In Button */}
-            <button type="submit" className="log-in-button">
-              <span className="btn-text">Log In</span>
+            <button onClick={dashlayout} type="submit" className="log-in-button">
+              <span className="btn-text" >Log In</span>
               <span className="arrow">
                 <i className="ri-arrow-right-line"></i>
               </span>
