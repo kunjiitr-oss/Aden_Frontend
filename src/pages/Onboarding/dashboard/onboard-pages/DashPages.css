@@ -138,138 +138,154 @@
     font-size: 1rem;
 }
 
-/* --- System Metrics --- */
+/* System Metrics Specific CSS */
 .system-metrics-section {
   border-radius: 16px;
-  /* Removed border/shadow for a cleaner, modern look similar to the image */
-  /* border: 1px solid var(--color-border); */ 
-  /* box-shadow: none; */ 
+  margin: 20px 0;
 }
 
-.head-text {
-  font-size: 1.5rem; /* Larger for 'System Metrics' */
+.system-metrics-heading {
+  font-size: 1.2rem;
   font-weight: 600;
-  color: var(--color-text-primary);
+  color: #1a1a1a;
   display: flex;
   align-items: center;
-  margin-bottom: 24px; /* More space below the title */
+  font-family: 'Roobert', 'Inter', system-ui, sans-serif;
 }
 
 .info-icon {
   font-size: 1rem;
-  color: var(--color-text-secondary);
-  margin-left: 6px;
+  color: #61636b;
+  margin-left: 8px;
   cursor: pointer;
 }
 
 .metrics-grid {
-  display: flex;
-  gap: 12px; /* Smaller gap */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
   margin-bottom: 20px;
 }
 
 .metric-card {
-  flex: 1;
-  /* Card styling to match the image */
-  padding: 16px 12px;
-  border-radius: 16px; /* Slightly less rounded */
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 20px 16px;
   text-align: center;
-  background: var(--color-card-bg);
-  border: 1px solid var(--color-border);
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05); /* Subtle shadow */
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 0.2s ease;
 }
 
 .metric-header {
-  width: 100%; /* Important for internal spacing */
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Centered vertically */
-  margin-bottom: 4px;
-  padding: 0 4px; /* Slight horizontal padding inside card */
+  align-items: center;
 }
 
 .metric-card h4 {
-  font-size: 0.9rem; /* Smaller, lighter text */
+  font-size: 0.95rem;
   font-weight: 500;
-  color: var(--color-text-primary);
+  color: #1a1a1a;
+  margin: 0;
+  font-family: 'Roobert', 'Inter', system-ui, sans-serif;
 }
 
 .metric-icon {
-  /* Common icon styling (circle with outline) */
-  font-size: 1.25rem;
-  padding: 6px; /* Padding creates the inner space */
+  font-size: 1.4rem;
+  padding: 8px;
   border-radius: 50%;
   border: 2px solid;
-  color: var(--color-icon-fill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
 }
 
-/* Specific icon colors based on the image */
+/* Cardiovascular - Yellow/Gold */
 .cardiovascular-icon {
-  border-color: var(--color-cardio-border);
-  color: var(--color-cardio-border); /* Yellow fill for cardio icon */
-}
-.metabolic-icon, .respiratory-icon, .nervous-icon {
-  border-color: var(--color-other-border);
-  color: var(--color-other-border); /* Green fill for other icons */
+  border-color: #ffcc00;
+  color: #ffcc00;
+  background: rgba(255, 204, 0, 0.1);
 }
 
+/* Metabolic - Green */
+.metabolic-icon {
+  border-color: #2a9d8f;
+  color: #2a9d8f;
+  background: rgba(42, 157, 143, 0.1);
+}
 
+/* Respiratory - Green */
+.respiratory-icon {
+  border-color: #2a9d8f;
+  color: #2a9d8f;
+  background: rgba(42, 157, 143, 0.1);
+}
+
+/* Nervous - Green */
+.nervous-icon {
+  border-color: #2a9d8f;
+  color: #2a9d8f;
+  background: rgba(42, 157, 143, 0.1);
+}
+.count-system{
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+}
 .metric-value {
-  font-size: 2.25rem; /* Slightly larger number */
-  font-weight: 600;
-  color: var(--color-text-primary);
-  margin: 0 0 8px 0; /* Adjusted vertical margin */
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-family: 'Roobert', 'Inter', system-ui, sans-serif;
 }
 
 /* Status Badge Styling */
 .status.fair {
-  font-size: 0.75rem; /* text-xs */
-  color: var(--color-fair-text); 
+  font-size: 0.7rem;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
-  /* background-color: var(--color-fair-bg); */ /* Removed background color for a cleaner look */
-  padding: 4px 10px;
-  border-radius: 9999px;
-  position: relative; /* For the dot positioning */
+  padding: 6px 14px 6px 24px;
+  position: relative;
+  font-family: 'Roobert', 'Inter', system-ui, sans-serif;
 }
 
-/* Creating the yellow dot using ::before pseudo-element */
 .status.fair::before {
   content: '';
-  width: 6px;
-  height: 6px;
-  background-color: var(--color-fair-dot);
+  width: 8px;
+  height: 8px;
+  background-color: #ffcc00;
   border-radius: 50%;
   position: absolute;
-  left: 2px; /* Position to the left of the text */
+  left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  margin-right: 4px;
-  border: 1px solid #ffffff; /* White border to make it pop */
+  box-shadow: 0 0 0 2px rgba(255, 204, 0, 0.3);
 }
 
 .see-more-btn {
   background: none;
   border: none;
-  color: var(--color-text-secondary);
-  font-size: 0.875rem;
+  color: #61636b;
+  font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
-  padding: 4px 8px;
+  padding: 10px 16px;
   border-radius: 8px;
-  transition: background-color 0.2s;
-  width: 100%; /* Button spanning full width */
+  transition: all 0.2s ease;
+  width: 100%;
   text-align: center;
-  margin-top: 4px;
+  font-family: 'Roobert', 'Inter', system-ui, sans-serif;
 }
 
-.see-more-btn:hover {
-  background-color: #ededed;
-}
+
 /* --- Upcoming Card --- */
 .upcoming-card {
   /* Inherits card styling */
@@ -330,13 +346,13 @@
 .health-sections {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 20px;
 }
 
 .health-col {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
 }
 .health-col h4{
   color: #61636B;
@@ -353,15 +369,19 @@
 }
 
 .health-card {
-  background: var(--color-card-bg);
-  border: 1px solid var(--color-border);
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); /* subtle shadow */
+  padding: 20px 15px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   transition: all 0.2s;
   cursor: pointer;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 140px;
+  height: 100%;
 }
-
 .health-card:hover {
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.08);
 }

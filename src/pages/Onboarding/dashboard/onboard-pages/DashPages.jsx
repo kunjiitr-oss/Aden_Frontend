@@ -42,60 +42,62 @@ const DashPages = () => {
             </div>
           </section>
 
-      {/* System Metrics */}
+      {/* System Metrics Section */}
       <section className="system-metrics-section">
-      <h3 className="head-text">
-        System Metrics <FiInfo className="info-icon" />
-      </h3>
-      <div className="metrics-grid">
-        {/* Cardiovascular */}
-        <div className="metric-card">
-          <div className="metric-header">
-            <h4>Cardiovascular</h4>
-            {/* The icon has a yellow/gold outline in the image */}
-            <FaHeartbeat className="metric-icon cardiovascular-icon" />
+        <h3 className="system-metrics-heading">
+          System Metrics <FiInfo className="info-icon" />
+        </h3>
+        <div className="metrics-grid">
+          {/* Cardiovascular */}
+          <div className="metric-card">
+            <div className="metric-header">
+              <h4>Cardiovascular</h4>
+              <FaHeartbeat className="metric-icon cardiovascular-icon" />
+            </div>
+             <div className="count-system">
+               <div className="metric-value">62</div>
+            <span className="status fair">Fair</span>
+             </div>
           </div>
-          <p className="metric-value">62</p>
-          <span className="status fair">Fair</span>
-        </div>
 
-        {/* Metabolic */}
-        <div className="metric-card">
-          <div className="metric-header">
-            <h4>Metabolic</h4>
-            {/* The icon has a green outline in the image */}
-            <FaBurn className="metric-icon metabolic-icon" />
+          {/* Metabolic */}
+          <div className="metric-card">
+            <div className="metric-header">
+              <h4>Metabolic</h4>
+              <FaBurn className="metric-icon metabolic-icon" />
+            </div>
+             <div className="count-system">
+              <div className="metric-value">72</div>
+            <span className="status fair">Fair</span>
+             </div>
           </div>
-          <p className="metric-value">72</p>
-          <span className="status fair">Fair</span>
-        </div>
 
-        {/* Respiratory */}
-        <div className="metric-card">
-          <div className="metric-header">
-            <h4>Respiratory</h4>
-            {/* The icon has a green outline in the image */}
-            <FaLungs className="metric-icon respiratory-icon" />
+          {/* Respiratory */}
+          <div className="metric-card">
+            <div className="metric-header">
+              <h4>Respiratory</h4>
+              <FaLungs className="metric-icon respiratory-icon" />
+            </div>
+              <div className="count-system">
+                <div className="metric-value">82</div>
+            <span className="status fair">Fair</span>
+              </div>
           </div>
-          <p className="metric-value">82</p>
-          <span className="status fair">Fair</span>
-        </div>
 
-        {/* Nervous */}
-        <div className="metric-card">
-          <div className="metric-header">
-            <h4>Nervous</h4>
-            {/* The icon has a green outline in the image */}
-            <FaCogs className="metric-icon nervous-icon" />
+          {/* Nervous */}
+          <div className="metric-card">
+            <div className="metric-header">
+              <h4>Nervous</h4>
+              <FaCogs className="metric-icon nervous-icon" />
+            </div>
+            <div className="count-system">
+               <div className="metric-value">85</div>
+            <span className="status fair">Fair</span>
+            </div>
           </div>
-          <p className="metric-value">85</p>
-          <span className="status fair">Fair</span>
         </div>
-      </div>
-      {/* Assuming 'See 5 more' button is part of the original design, 
-          although not fully visible in the cropped image */}
-      <button className="see-more-btn">See 5 more</button>
-    </section>
+        <button className="see-more-btn">See 5 more</button>
+      </section>
         </div>
 
         {/* Upcoming Card */}
